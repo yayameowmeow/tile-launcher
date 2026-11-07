@@ -1,0 +1,16 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Category": "Application Launchers",
+        "Description": "A popup of tiled buttons that launch applications and scripts. Place as many as you like, each with its own items, name and icon.",
+        "Icon": "/icons/TiledLauncher.svg",
+        "Id": "local.tilelauncher",
+        "License": "GPL-3.0-or-later",
+        "Name": "Tile Launcher",
+        "Version": "1.0",
+        "Website": "https://github.com/yayameowmeow/tile-launcher",
+        "BugReportUrl": "https://github.com/yayameowmeow/tile-launcher/issues"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": []
+}
