@@ -5,6 +5,8 @@ import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
+import "../code/logic.js" as Logic
+
 KCM.SimpleKCM {
     id: page
 
@@ -36,7 +38,7 @@ KCM.SimpleKCM {
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
             contentItem: Kirigami.Icon {
-                source: page.cfg_widgetIcon || Qt.resolvedUrl("../icons/TiledLauncher.svg")
+                source: page.cfg_widgetIcon || Qt.resolvedUrl("../icons/" + Logic.defaultIconFile(Kirigami.ColorUtils.brightnessForColor(Kirigami.Theme.backgroundColor) === Kirigami.ColorUtils.Dark))
             }
         }
 

@@ -23,6 +23,11 @@ var BUILTIN_PRESETS = [
       layout: { columns: 0, tileWidth: 64, tileHeight: 64, iconSize: 48, labelMode: 2, spacing: 2, tileStyle: 0 } }
 ];
 
+// The default icon's file name: the dark version goes with a dark theme.
+function defaultIconFile(darkTheme) {
+    return darkTheme ? "TiledLauncherDark.svg" : "TiledLauncher.svg";
+}
+
 function findPreset(presets, id) {
     for (var i = 0; i < presets.length; i++) {
         if (presets[i].id === id) {

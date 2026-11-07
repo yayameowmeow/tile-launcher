@@ -1,5 +1,8 @@
 import QtQuick
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.configuration
+
+import "../code/logic.js" as Logic
 
 ConfigModel {
     ConfigCategory {
@@ -9,7 +12,7 @@ ConfigModel {
     }
     ConfigCategory {
         name: i18n("Layout & Presets")
-        icon: Qt.resolvedUrl("../icons/TiledLauncher.svg")
+        icon: Qt.resolvedUrl("../icons/" + Logic.defaultIconFile(Kirigami.ColorUtils.brightnessForColor(Kirigami.Theme.backgroundColor) === Kirigami.ColorUtils.Dark))
         source: "ConfigLayout.qml"
     }
     ConfigCategory {

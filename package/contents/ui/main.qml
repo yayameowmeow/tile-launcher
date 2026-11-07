@@ -1,5 +1,6 @@
 import QtQuick
 
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support as P5Support
@@ -11,7 +12,8 @@ PlasmoidItem {
 
     readonly property var cfg: Plasmoid.configuration
     readonly property string displayName: cfg.widgetName || Plasmoid.metaData.name
-    readonly property string defaultIcon: Qt.resolvedUrl("../icons/TiledLauncher.svg")
+    readonly property bool darkTheme: Kirigami.ColorUtils.brightnessForColor(Kirigami.Theme.backgroundColor) === Kirigami.ColorUtils.Dark
+    readonly property string defaultIcon: Qt.resolvedUrl("../icons/" + Logic.defaultIconFile(darkTheme))
     readonly property string displayIcon: cfg.widgetIcon || defaultIcon
     readonly property bool showName: cfg.showName
     readonly property int formFactor: Plasmoid.formFactor

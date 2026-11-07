@@ -88,6 +88,11 @@ TestCase {
         compare(offset.y, 0);
     }
 
+    function test_defaultIconFile_followsTheme() {
+        compare(Logic.defaultIconFile(true), "TiledLauncherDark.svg");
+        compare(Logic.defaultIconFile(false), "TiledLauncher.svg");
+    }
+
     function test_shellQuote_escapesSingleQuotes() {
         compare(Logic.shellQuote("it's"), "'it'\\''s'");
     }
